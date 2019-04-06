@@ -47,37 +47,37 @@ $(document).ready(function(){
     var openHours = [
         {
             day: 'monday',
-            open: '8:00',
+            open: '08:00',
             closed: '20:00',
             closedAllDay: false
         },
         {
             day: 'tuesday',
-            open: '8:00',
+            open: '08:00',
             closed: '20:00',
             closedAllDay: false
         },
         {
             day: 'wednesday',
-            open: '8:00',
+            open: '08:00',
             closed: '20:00',
             closedAllDay: false
         },
         {
             day: 'thursday',
-            open: '8:00',
+            open: '08:00',
             closed: '20:00',
             closedAllDay: false
         },
         {
             day: 'friday',
-            open: '8:00',
+            open: '08:00',
             closed: '20:00',
             closedAllDay: false
         },
         {
             day: 'saturday',
-            open: '8:00',
+            open: '08:00',
             closed: '20:00',
             closedAllDay: false
         },
