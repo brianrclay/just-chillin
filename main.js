@@ -43,4 +43,87 @@ $(document).ready(function(){
             });
         }
     })
+
+    var openHours = [
+        {
+            day: 'monday',
+            open: '8:00',
+            closed: '20:00',
+            closedAllDay: false
+        },
+        {
+            day: 'tuesday',
+            open: '8:00',
+            closed: '20:00',
+            closedAllDay: false
+        },
+        {
+            day: 'wednesday',
+            open: '8:00',
+            closed: '20:00',
+            closedAllDay: false
+        },
+        {
+            day: 'thursday',
+            open: '8:00',
+            closed: '20:00',
+            closedAllDay: false
+        },
+        {
+            day: 'friday',
+            open: '8:00',
+            closed: '20:00',
+            closedAllDay: false
+        },
+        {
+            day: 'saturday',
+            open: '8:00',
+            closed: '20:00',
+            closedAllDay: false
+        },
+        {
+            day: 'sunday',
+            open: '0',
+            closed: '0',
+            closedAllDay: true
+        }
+    ]
+
+    var currentDate = new Date;
+    var day = currentDate.getDay();
+    var hour = currentDate.getHours();
+    var min = currentDate.getMinutes();
+    openTime = openHours[day - 1].open
+    closedTime = openHours[day - 1].closed
+
+    var openHoursMinutes = openTime.split(/[.:]/);
+    var closedHoursMinutes = closedTime.split(/[.:]/);
+    var formatedOpen = (parseInt(openHoursMinutes[0] + openHoursMinutes[1]));
+    var formatedClosed = (parseInt(closedHoursMinutes[0] + closedHoursMinutes[1]));
+    var formatedCurrentTime = (parseInt(""+ hour + min));
+
+    function tConvert (time) {
+        // Check correct time format and split into components
+        time = time.toString ().match (/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
+      
+        if (time.length > 1) { // If time format correct
+          time = time.slice (1);  // Remove full string match value
+          time[5] = +time[0] < 12 ? ' am' : ' pm'; // Set AM/PM
+          time[0] = +time[0] % 12 || 12; // Adjust hours
+        }
+        return time.join (''); // return adjusted time or original string
+      }
+
+    var openToday = tConvert (openTime);
+    var closedToday = tConvert (closedTime);
+
+    if(formatedCurrentTime >= formatedOpen && formatedCurrentTime <= formatedClosed && !openHours[day -1].closedAllDay){
+        $('.toast-headline').text("We're Open Now!");
+        $('.open-toast img').attr('src', '/images/smile.svg')
+        $('.toast-hours').text("Today's Hours: " + openToday + ' - ' + closedToday)
+    }else{
+        $('.toast-headline').text("We're closed now");
+        $('.open-toast img').attr('src', '/images/asleep.svg')
+        $('.toast-hours').text("We're sad too")
+    }
 })
