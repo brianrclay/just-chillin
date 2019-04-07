@@ -46,6 +46,12 @@ $(document).ready(function(){
 
     var openHours = [
         {
+            day: 'sunday',
+            open: '00:00',
+            closed: '00:00',
+            closedAllDay: true
+        },
+        {
             day: 'monday',
             open: '08:00',
             closed: '20:00',
@@ -80,12 +86,6 @@ $(document).ready(function(){
             open: '08:00',
             closed: '20:00',
             closedAllDay: false
-        },
-        {
-            day: 'sunday',
-            open: '0',
-            closed: '0',
-            closedAllDay: true
         }
     ]
 
@@ -93,8 +93,8 @@ $(document).ready(function(){
     var day = currentDate.getDay();
     var hour = currentDate.getHours();
     var min = currentDate.getMinutes();
-    openTime = openHours[day - 1].open
-    closedTime = openHours[day - 1].closed
+    openTime = openHours[day].open
+    closedTime = openHours[day].closed
 
     var openHoursMinutes = openTime.split(/[.:]/);
     var closedHoursMinutes = closedTime.split(/[.:]/);
@@ -127,9 +127,6 @@ $(document).ready(function(){
 
     var message = (cleverMessage[Math.floor(Math.random() * cleverMessage.length -1 ) + 1 ])
 
-    // console.log(cleverMessage[Math.floor(Math.random() * cleverMessage.length) + 0 ])
-    console.log(Math.floor(Math.random() * cleverMessage.length -1 ) + 1 )
-
     if(formatedCurrentTime >= formatedOpen && formatedCurrentTime <= formatedClosed && !openHours[day -1].closedAllDay){
         $('.toast-headline').text("We're Open Now!");
         $('.open-toast img').attr('src', '/images/smile.svg')
@@ -137,6 +134,6 @@ $(document).ready(function(){
     }else{
         $('.toast-headline').text("We're closed right now");
         $('.open-toast img').attr('src', '/images/asleep.svg')
-        $('.toast-hours').text(message)
+        $('.toast-hours').text(message);
     }
 })
