@@ -117,13 +117,26 @@ $(document).ready(function(){
     var openToday = tConvert (openTime);
     var closedToday = tConvert (closedTime);
 
+    var cleverMessage = [
+        "We're sad too",
+        "Check back tomorrow",
+        "The sun will come out tomorrow",
+        "Keep calm and soda on",
+        "We're just chillin"
+    ]
+
+    var message = (cleverMessage[Math.floor(Math.random() * cleverMessage.length -1 ) + 1 ])
+
+    // console.log(cleverMessage[Math.floor(Math.random() * cleverMessage.length) + 0 ])
+    console.log(Math.floor(Math.random() * cleverMessage.length -1 ) + 1 )
+
     if(formatedCurrentTime >= formatedOpen && formatedCurrentTime <= formatedClosed && !openHours[day -1].closedAllDay){
         $('.toast-headline').text("We're Open Now!");
         $('.open-toast img').attr('src', '/images/smile.svg')
         $('.toast-hours').text("Today's Hours: " + openToday + ' - ' + closedToday)
     }else{
-        $('.toast-headline').text("We're closed now");
+        $('.toast-headline').text("We're closed right now");
         $('.open-toast img').attr('src', '/images/asleep.svg')
-        $('.toast-hours').text("We're sad too")
+        $('.toast-hours').text(message)
     }
 })
