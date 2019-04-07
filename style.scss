@@ -311,11 +311,11 @@ h4, li{
     right: 30px;
     z-index: 1;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
-    background: #fff;
-    padding: 20px 25px;
+    background: linear-gradient(110.8deg, #8A59E9 1.78%, #42F4EB 123.41%);;
+    padding: 10px 20px;
     display: flex;
     align-items: flex-start;
-    border-radius: 6px;
+    border-radius: 50px;
     animation: fadeIn 300ms ease forwards;
     animation-delay: 1s;
     opacity: 0;
@@ -326,10 +326,10 @@ h4, li{
         span{
             display: block;
             font-family: 'Crete Round', serif;
+            color: #fff;
         }
         span:first-child{
             margin-bottom: 8px;
-            color: $purple;
             font-size: 20px;
             font-family: 'Crete Round', serif;
         }
