@@ -89,12 +89,14 @@ $(document).ready(function(){
         }
     ]
 
-    var currentDate = new Date;
+    var currentDate = new Date();
     var day = currentDate.getDay();
     var hour = currentDate.getHours();
     var min = currentDate.getMinutes();
-    openTime = openHours[day].open
-    closedTime = openHours[day].closed
+    openTime = openHours[day].open;
+    closedTime = openHours[day].closed;
+
+    console.log('day:' + openHours[day]);
 
     var openHoursMinutes = openTime.split(/[.:]/);
     var closedHoursMinutes = closedTime.split(/[.:]/);
@@ -123,7 +125,11 @@ $(document).ready(function(){
         "The sun will come out tomorrow",
         "Keep calm and soda on",
         "We're just chillin"
-    ]
+    ];
+
+    console.log('formattedCurrentTime:' + formatedCurrentTime);
+    console.log('formatedOpen:' + formatedOpen);
+    console.log('formatedClosed:' + formatedClosed);
 
     var message = (cleverMessage[Math.floor(Math.random() * cleverMessage.length -1 ) + 1 ])
 
