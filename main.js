@@ -89,12 +89,14 @@ $(document).ready(function(){
         }
     ]
 
-    var currentDate = new Date;
+    var currentDate = new Date();
     var day = currentDate.getDay();
     var hour = currentDate.getHours();
     var min = currentDate.getMinutes();
-    openTime = openHours[day].open
-    closedTime = openHours[day].closed
+    openTime = openHours[day].open;
+    closedTime = openHours[day].closed;
+
+    console.log(openHours[day]);
 
     var openHoursMinutes = openTime.split(/[.:]/);
     var closedHoursMinutes = closedTime.split(/[.:]/);
@@ -123,17 +125,19 @@ $(document).ready(function(){
         "The sun will come out tomorrow",
         "Keep calm and soda on",
         "We're just chillin"
-    ]
+    ];
 
-    var message = (cleverMessage[Math.floor(Math.random() * cleverMessage.length -1 ) + 1 ])
+    console.log(formatedCurrentTime >= formatedOpen, formatedCurrentTime <= formatedClosed, formatedClosed && !openHours[day].closedAllDay);
 
-    if(formatedCurrentTime >= formatedOpen && formatedCurrentTime <= formatedClosed && !openHours[day -1].closedAllDay){
+    var message = (cleverMessage[Math.floor(Math.random() * cleverMessage.length -1 ) + 1 ]);
+
+    if(formatedCurrentTime >= formatedOpen && formatedCurrentTime <= formatedClosed && !openHours[day].closedAllDay){
         $('.toast-headline').text("We're Open Now!");
-        $('.open-toast img').attr('src', '/images/smile.svg')
-        $('.toast-hours').text("Today's Hours: " + openToday + ' - ' + closedToday)
+        $('.open-toast img').attr('src', '/images/smile.svg');
+        $('.toast-hours').text("Today's Hours: " + openToday + ' - ' + closedToday);
     }else{
         $('.toast-headline').text("We're closed right now");
-        $('.open-toast img').attr('src', '/images/asleep.svg')
+        $('.open-toast img').attr('src', '/images/asleep.svg');
         $('.toast-hours').text(message);
     }
 })
