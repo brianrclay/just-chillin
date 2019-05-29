@@ -1,17 +1,17 @@
 $(document).ready(function(){
     $('.menu-btn').click(function(){
         $('.menu').addClass('open');
-    })
+    });
     $('.close').click(function(){
         $('.menu').removeClass('open');
-    })
+    });
 
     var topPadding = '60px';
     var topScrollPadding = '30px 60px';
     var wWidth = $(window).width();
     if(wWidth <= 768){
-        topPadding = '30px'
-        topScrollPadding = '30px'
+        topPadding = '30px';
+        topScrollPadding = '30px';
     }
 
     $('.menu').scroll(function(){
@@ -42,7 +42,7 @@ $(document).ready(function(){
                 'background-color': 'transparent'
             });
         }
-    })
+    });
 
     var openHours = [
         {
@@ -53,41 +53,41 @@ $(document).ready(function(){
         },
         {
             day: 'monday',
-            open: '08:00',
+            open: '09:00',
             closed: '20:00',
             closedAllDay: false
         },
         {
             day: 'tuesday',
-            open: '08:00',
+            open: '09:00',
             closed: '20:00',
             closedAllDay: false
         },
         {
             day: 'wednesday',
-            open: '08:00',
+            open: '09:00',
             closed: '20:00',
             closedAllDay: false
         },
         {
             day: 'thursday',
-            open: '08:00',
+            open: '09:00',
             closed: '20:00',
             closedAllDay: false
         },
         {
             day: 'friday',
-            open: '08:00',
+            open: '09:00',
             closed: '20:00',
             closedAllDay: false
         },
         {
             day: 'saturday',
-            open: '08:00',
+            open: '09:00',
             closed: '20:00',
             closedAllDay: false
         }
-    ]
+    ];
 
     var currentDate = new Date();
     var day = currentDate.getDay();
@@ -140,4 +140,4 @@ $(document).ready(function(){
         $('.open-toast img').attr('src', '/images/asleep.svg');
         $('.toast-hours').text(message);
     }
-})
+});
