@@ -78,13 +78,13 @@ $(document).ready(function(){
         {
             day: 'friday',
             open: '09:00',
-            closed: '21:00',
+            closed: '22:00',
             closedAllDay: false
         },
         {
             day: 'saturday',
             open: '09:00',
-            closed: '21:00',
+            closed: '22:00',
             closedAllDay: false
         }
     ];
