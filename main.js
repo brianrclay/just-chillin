@@ -53,38 +53,38 @@ $(document).ready(function(){
         },
         {
             day: 'monday',
-            open: '09:00',
-            closed: '21:00',
+            open: '07:30',
+            closed: '20:30',
             closedAllDay: false
         },
         {
             day: 'tuesday',
-            open: '09:00',
-            closed: '21:00',
+            open: '07:30',
+            closed: '20:30',
             closedAllDay: false
         },
         {
             day: 'wednesday',
-            open: '09:00',
-            closed: '21:00',
+            open: '07:30',
+            closed: '20:30',
             closedAllDay: false
         },
         {
             day: 'thursday',
-            open: '09:00',
-            closed: '21:00',
+            open: '07:30',
+            closed: '20:30',
             closedAllDay: false
         },
         {
             day: 'friday',
-            open: '09:00',
-            closed: '22:00',
+            open: '07:30',
+            closed: '20:30',
             closedAllDay: false
         },
         {
             day: 'saturday',
             open: '09:00',
-            closed: '22:00',
+            closed: '21:00',
             closedAllDay: false
         }
     ];
