@@ -54,31 +54,31 @@ $(document).ready(function(){
         {
             day: 'monday',
             open: '07:30',
-            closed: '20:30',
+            closed: '21:00',
             closedAllDay: false
         },
         {
             day: 'tuesday',
             open: '07:30',
-            closed: '20:30',
+            closed: '21:00',
             closedAllDay: false
         },
         {
             day: 'wednesday',
             open: '07:30',
-            closed: '20:30',
+            closed: '21:00',
             closedAllDay: false
         },
         {
             day: 'thursday',
             open: '07:30',
-            closed: '20:30',
+            closed: '21:00',
             closedAllDay: false
         },
         {
             day: 'friday',
             open: '07:30',
-            closed: '20:30',
+            closed: '21:00',
             closedAllDay: false
         },
         {
