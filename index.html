@@ -74,14 +74,26 @@
             </div>
             <img src="/images/x.svg" class="close" alt="close menu">
         </div>
+        <div class="menu-heading">
+            <h2>Drinks</h2>
+        </div>
+        <div class="prices">
+            <img src="./images/prices.svg">
+        </div>
         <div class="menu-items">
             <div class="col">
                 <div class="category">
-                    <h2>Dr. Pepper</h2>
+                    <div class="soda-toggle">
+                        <div class="soda-brand">
+                            <div class="soda-logo" style="background-image: url('./images/soda-brand/dr-pepper.png');"></div>
+                            <h2>Dr. Pepper</h2>
+                        </div>
+                        <img src="./images/down-caret.svg" class="caret">
+                    </div>
                     <div class="item">
                         <h3>Bali</h3>
                         <h4>Dr. Pepper, Coconut</h4>
-                    </div>
+                    </div> 
                     <div class="item">
                         <h3>Aruba</h3>
                         <h4>Dr. Pepper, Coconut, Peach</h4>
@@ -96,21 +108,39 @@
                     </div>
                 </div>
                 <div class="category">
-                    <h2>Diet Dr. Pepper</h2>
+                    <div class="soda-toggle">
+                        <div class="soda-brand">
+                            <div class="soda-logo" style="background-image: url('./images/soda-brand/diet-dr-pepper.png');"></div>
+                            <h2>Diet Dr. Pepper</h2>
+                        </div>
+                        <img src="./images/down-caret.svg" class="caret">
+                    </div>
                     <div class="item">
                         <h3>Maya</h3>
                         <h4>Diet Dr. Pepper, Coconut</h4>
                     </div>
                 </div>
                 <div class="category">
-                    <h2>Diet Coke</h2>
+                    <div class="soda-toggle">
+                        <div class="soda-brand">
+                            <div class="soda-logo" style="background-image: url('./images/soda-brand/diet-coke.png');"></div>
+                            <h2>Diet Coke</h2>
+                        </div>
+                        <img src="./images/down-caret.svg" class="caret">
+                    </div>
                     <div class="item">
                         <h3>Bora Bora</h3>
                         <h4>Diet Coke, Coconut, Lime</h4>
                     </div>
                 </div>
                 <div class="category">
-                    <h2>Lemonade</h2>
+                    <div class="soda-toggle">
+                        <div class="soda-brand">
+                            <div class="soda-logo" style="background-image: url('./images/soda-brand/lemonade.png');"></div>
+                            <h2>Lemonade</h2>
+                        </div>
+                        <img src="./images/down-caret.svg" class="caret">
+                    </div>
                     <div class="item">
                         <h3>Panama</h3>
                         <h4>Lemonade, Mango, Strawberry</h4>
@@ -123,7 +153,13 @@
             </div>
             <div class="col">
                 <div class="category">
-                    <h2>Mountain Dew</h2>
+                    <div class="soda-toggle">
+                        <div class="soda-brand">
+                            <div class="soda-logo" style="background-image: url('./images/soda-brand/mtn-dew.png');"></div>
+                            <h2>Mountain Dew</h2>
+                        </div>
+                        <img src="./images/down-caret.svg" class="caret">
+                    </div>
                     <div class="item">
                         <h3>Palm Cove</h3>
                         <h4>Mountain Dew, Coconut, Strawberry, Lime</h4>
@@ -154,7 +190,13 @@
                     </div>
                 </div>
                 <div class="category">
-                    <h2>Pepsi</h2>
+                    <div class="soda-toggle">
+                        <div class="soda-brand">
+                            <div class="soda-logo" style="background-image: url('./images/soda-brand/pepsi.png');"></div>
+                            <h2>Pepsi</h2>
+                        </div>
+                        <img src="./images/down-caret.svg" class="caret">
+                    </div>
                     <div class="item">
                         <h3>Venice</h3>
                         <h4>Pepsi, Coconut, Vanilla</h4>
@@ -167,7 +209,13 @@
             </div>
             <div class="col">
                 <div class="category">
-                    <h2>Sprite</h2>
+                    <div class="soda-toggle">
+                        <div class="soda-brand">
+                            <div class="soda-logo" style="background-image: url('./images/soda-brand/sprite.png');"></div>
+                            <h2>Sprite</h2>
+                        </div>
+                        <img src="./images/down-caret.svg" class="caret">
+                    </div>
                     <div class="item">
                         <h3>Honolulu</h3>
                         <h4>Sprite, Coconut, Mango</h4>
@@ -194,7 +242,13 @@
                     </div>
                 </div>
                 <div class="category">
-                    <h2>Kids</h2>
+                    <div class="soda-toggle">
+                        <div class="soda-brand">
+                            <div class="soda-logo" style="background-image: url('./images/soda-brand/kids.png');"></div>
+                            <h2>Kids</h2>
+                        </div>
+                        <img src="./images/down-caret.svg" class="caret">
+                    </div>
                     <div class="item">
                         <h3>Sand Dollar</h3>
                         <h4>Sprite, Coconut</h4>
@@ -216,68 +270,57 @@
         </div>
         <div class="menu-heading">
             <h2>Sweets</h2>
-            <span>$2.00</span>
         </div>
-        <div class="menu-items">
-            <div class="col">
-                <div class="item">
-                    <h3>Cookie w/ Filling</h3>
-                    <ul>
-                        <li>Strawberry Cookie with Lemonade Filling</li>
-                        <li>Peanut Butter Cookie with Jelly Filling</li>
-                        <li>Salted Chocolate Chip Cookie with Fudge Center</li>
-                    </ul>
+        <div class="treat-wrapper">
+            <div class="row">
+                <div class="col">
+                    <div class="treat">
+                        <div class="treat-image" style="background-image: url('./images/treats/sugar-cookie.png');"><div class="price">$2.00</div></div>
+                        <h3>Pink Frosted Cookie</h3>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="treat">
+                        <div class="treat-image" style="background-image: url('./images/treats/biscoff.png');"><div class="price">$2.00</div></div>
+                        <h3>Frosted Biscoff</h3>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="treat">
+                        <div class="treat-image" style="background-image: url('./images/treats/oreo.png');"><div class="price">$2.00</div></div>
+                        <h3>Oreo Cookies and Cream</h3>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="treat">
+                        <div class="treat-image" style="background-image: url('./images/treats/chocolate-chip.png');"><div class="price">$2.00</div></div>
+                        <h3>Sea Salt Chocolate Chip Fudge Filled</h3>
+                    </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="item">
-                    <h3>Donut Holes</h3>
-                    <h4>Includes Frosting Cup</h4>
+            <div class="row">
+                <div class="col">
+                    <div class="treat">
+                        <div class="treat-image" style="background-image: url('./images/treats/lemonade-cookie.png');"><div class="price">$2.00</div></div>
+                        <h3>Strawberry Lemonade Cookie</h3>
+                    </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="item">
-                    <h3>Cinnamon Rolls</h3>
+                <div class="col">
+                    <div class="treat">
+                        <div class="treat-image" style="background-image: url('./images/treats/cinnamon-role.png');"><div class="price">$2.50</div></div>
+                        <h3>Cinnamon Rolls</h3>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="menu-heading">
-            <h2>Pricing</h2>
-        </div>
-        <div class="pricing">
-            <div class="price">
-                <h2>12oz</h2>
-                <!-- <img src="images/12.png"> -->
-                <h3>$1.75</h3>
-            </div>
-            <div class="price">
-                <h2>24oz</h2>
-                <!-- <img src="images/24.png"> -->
-                <h3>$2.25</h3>
-            </div>
-            <div class="price">
-                <h2>32oz</h2>
-                <!-- <img src="images/32.png"> -->
-                <h3>$2.50</h3>
-            </div>
-            <div class="price">
-                <h2>44oz</h2>
-                <!-- <img src="images/44.png"> -->
-                <h3>$2.75</h3>
-            </div>
-            <div class="price">
-                <h3>+25 cents per flavor</h3>
+                <div class="col">
+                    <div class="treat">
+                        <div class="treat-image" style="background-image: url('./images/treats/doughnut-holes.png');"><div class="price">$2.50</div></div>
+                        <h3>Donut Holes</h3>
+                    </div>
+                </div>
+                <div class="col"></div>
             </div>
         </div>
     </div>
-
-    <!-- <div class="open-toast">
-        <img src="images/smile.svg">
-        <div>
-            <span class="toast-headline">We're open now!</span>
-            <span class="toast-hours">Come get your drink on!</span>
-        </div>
-    </div> -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
