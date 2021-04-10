@@ -255,10 +255,12 @@ h4, li{
 
         .item{
             margin:0 0 25px 44px;
+            transition: opacity 300ms ease, height 300ms ease;
         }
 
         .category{
             margin-bottom: 50px;
+            transition: height 300ms ease;
         }
 
         .soda-toggle{
@@ -266,6 +268,7 @@ h4, li{
             align-items: center;
             margin-bottom: 20px;
             justify-content: space-between;
+            pointer-events: none;
 
             .caret{
                 transition: transform 300ms ease;
@@ -371,7 +374,7 @@ h4, li{
     }
 }
 
-@media (max-width: 900px){
+@media (max-width: 990px){
     .page{
         flex-direction: column;
     }
@@ -413,38 +416,124 @@ h4, li{
                     width: 100%;
                 }
             }
+
+            .category{
+                margin: 0 0 24px 0;
+    
+                &.open{
+                    margin: 0 0 48px 0;
+                    .item{
+                        opacity: 1;
+                        pointer-events: auto; 
+                        height: 46px;
+                        margin: 0 0 25px 44px;
+                        visibility: visible;
+                    }
+
+                    .caret{
+                        transform: rotate(-180deg);
+                    }
+                }
+    
+                .item{
+                    opacity: 0;
+                    pointer-events: none;
+                    visibility: hidden;
+                    height: 0;
+                    margin: 0;
+                }
+            }
+
+            .soda-toggle{
+                pointer-events: auto;
+
+                &:hover{
+                    cursor: pointer;
+                }
+
+                .caret{
+                    transition: transform 300ms ease;
+                    opacity: 1;
+                }
+    
+                .soda-brand{
+                    
+                    .soda-logo{
+                    }
+                }
+            }
         }
 
         .menu-heading {
             margin: 0 30px 30px;
         }
+
         
-        .pricing{
-            padding: 0 30px 30px;
-        }
-    } 
+        
+        .treat-wrapper{
+            margin: 0 30px;
 
-    .open-toast{
-        top: unset;
-        bottom: 30px;
-        right: 50%;
-    }
+            .row{
+                flex-wrap: wrap;
+                margin-bottom: 0;
+    
+                .col{
+                    width: calc(50% - 16px);
+                    margin-right: 16px;
+        
+                    &:last-of-type{
+                        margin: 0;
+                        width: calc(50%);
+                    }
+    
+                    .treat{
+                        margin-bottom: 48px;
 
-    @keyframes fadeIn{
-        0%{
-            opacity: 0;
-            transform: translate(50%, -10px);
+                        .treat-image{
+                        }
+                    }
+                }
+            }
         }
     
-        100%{
-            opacity: 1;
-            transform: translate(50%, 0);
-        }
-    }
+    } 
 }
 
 @media (max-height: 800px){
     .info .details{
         margin: 40px 0 50px;
+    }
+}
+
+@media (max-width: 500px){
+    .menu{
+        .prices{
+            margin: -48px 30px 48px;
+        }
+        .treat-wrapper{
+            margin: 0 30px;
+
+            .row{
+                flex-wrap: wrap;
+                margin-bottom: 0;
+    
+                .col{
+                    width: 100%;
+                    margin-right: 0;
+        
+                    &:last-of-type{
+                        margin: 0;
+                        width: 100%;
+                    }
+    
+                    .treat{
+                        margin-bottom: 48px;
+
+                        .treat-image{
+                        }
+                    }
+                }
+            }
+        }
     }
 }
