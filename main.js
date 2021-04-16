@@ -1,10 +1,20 @@
 $(document).ready(function(){
     $('.menu-btn').click(function(){
         $('.menu').addClass('open');
+        $('.close-btn').focus()
     });
-    $('.close').click(function(){
+    $('.close-btn').click(function(){
         $('.menu').removeClass('open');
+        $('.menu-btn').focus();
     });
+
+    $(document).keyup(function(e) {
+        if (e.key === "Escape" && $('.menu').hasClass('open')) { 
+            $('.menu').removeClass('open');
+            $('.menu-btn').focus();
+            console.log('hi');
+       }
+   });
 
     var topPadding = '60px';
     var topScrollPadding = '30px 60px';
