@@ -193,6 +193,10 @@ h4, li {
   height: 30px;
   cursor: pointer;
 }
+.menu .menu-top .close-btn {
+  background: none;
+  border: none;
+}
 .menu .menu-items {
   display: flex;
   padding: 0 60px 60px;
